@@ -1,0 +1,2 @@
+alias : kel2
+password : kelompok2

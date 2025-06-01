@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutapp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backicon"
+            android:contentDescription="Back Button"
+            android:layout_gravity="start" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/soulmatchlogopure"
+            android:contentDescription="SoulMatch Logo"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
+
+        <!-- Settings Button -->
+        <ImageButton
+            android:id="@+id/settingsIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/settingicon"
+            android:contentDescription="Settings Button"
+            android:layout_gravity="end" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Konten FAQ Scrollable -->
+    <ScrollView
+        android:id="@+id/faqScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/faqContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- FAQ Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tentang Aplikasi"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:gravity="center"
+                android:padding="12dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apa itu SOULMATCH?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soulmatch adalah aplikasi seru untuk mengecek kecocokan cinta berdasarkan nama, zodiak, atau tanggal lahir."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fitur utama SOULMATCH"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SOULMATCH memiliki 4 fitur utama, yaitu 'perfect match', 'date match', 'star match', dan 'tarot spin'"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mengapa harus SOULMATCH?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SoulMatch memberikan cara yang menyenangkan dan informatif untuk memahami hubungan, baik dengan pasangan, teman, atau calon gebetan. Dengan tampilan cepat dan interaktif, SoulMatch menawarkan hiburan sekaligus wawasan yang menarik."                    android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Developer aplikasi SOULMATCH"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abid Faiz Zhidqi: UI/UX Designer"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gricelda Zaskia Andini: UI/UX Designer"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keysha Naurah Pambudi: Project Idea, UI/UX Designer"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Muhammad Fardan Wicaksana: UI/UX Designer, FE Developer, BE Developer"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Tutorial Video Label -->
+            <TextView
+                android:id="@+id/tutorialLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tutorial Video"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <!-- Tautan Video -->
+            <TextView
+                android:id="@+id/videoLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tonton Video Tutorial di sini"
+                android:autoLink="web"
+                android:layout_gravity="center"
+                android:textColor="@color/pink"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

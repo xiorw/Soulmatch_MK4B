@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/faq"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backicon"
+            android:contentDescription="Back Button"
+            android:layout_gravity="start" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/soulmatchlogopure"
+            android:contentDescription="SoulMatch Logo"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
+
+        <!-- Settings Button -->
+        <ImageButton
+            android:id="@+id/settingsIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/settingicon"
+            android:contentDescription="Settings Button"
+            android:layout_gravity="end" />
+    </androidx.appcompat.widget.Toolbar>
+    <!-- Konten FAQ Scrollable -->
+    <ScrollView
+        android:id="@+id/faqScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/faqContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- FAQ Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Question"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:gravity="center"
+                android:padding="12dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apa itu SOULMATCH?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soulmatch adalah aplikasi seru untuk mengecek kecocokan cinta berdasarkan nama, zodiak, atau tanggal lahir."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bagaimana cara kerjanya?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cukup masukkan nama, zodiak, atau tanggal lahir, dan Soulmatch akan menghitung persentase kecocokanmu menggunakan numerologi, astrologi, dan tarot."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apakah hasilnya akurat?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasil SoulMatch lebih untuk hiburan, jadi jangan terlalu serius! Ini cara menyenangkan untuk melihat potensi hubunganmu.
+"                    android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apa itu fitur pembaca tarot?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kamu bisa menarik kartu tarot untuk prediksi cinta yang unik. Setiap kartu punya arti khusus yang memberi wawasan tentang hubunganmu."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cocok untuk siapa?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aplikasi ini cocok untuk siapa saja yang ingin mencari tahu lebih banyak tentang hubungan mereka, mulai dari remaja hingga dewasa muda, atau siapa pun yang tertarik pada ramalan cinta dan astrologi."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apakah SOULMATCH gratis?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tentu saja! aplikasi ini gratis dan dapat dimainkan oleh siapapun, kapanpun, dan dimanapun."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- FAQ Content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bagaimana soal keamanan data?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:layout_marginTop="30dp"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SoulMatch masih dikembangkan, dan kami akan memastikan data pribadi kamu aman saat aplikasi diluncurkan sepenuhnya."
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:background="#F8F8F8"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/starmatch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Match.StarMatchActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/backicon"
+            android:contentDescription="Back Button"
+            android:layout_gravity="start" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/soulmatchlogopure"
+            android:contentDescription="SoulMatch Logo"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
+
+        <!-- Settings Button -->
+        <ImageButton
+            android:id="@+id/settingsIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/settingicon"
+            android:contentDescription="Settings Button"
+            android:layout_gravity="end" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Banner -->
+    <ImageButton
+        android:id="@+id/bannerImage"
+        android:layout_width="330dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tarotbn"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Tarot Banner" />
+
+    <!-- "Temukan Cinta Antara" Text -->
+    <TextView
+        android:id="@+id/findLoveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temukan Cinta Antara"
+        android:textColor="@color/pink"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/bannerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <!-- "Zodiak Kamu" Label -->
+    <TextView
+        android:id="@+id/yourZodiacLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zodiak Kamu"
+        android:textColor="@color/pink"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/findLoveText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <!-- EditText: Zodiak Kamu -->
+    <EditText
+        android:id="@+id/yourZodiac"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Masukkan zodiakmu"
+        android:singleLine="true"
+        android:inputType="textCapWords"
+        android:background="@drawable/edit_text"
+        android:padding="12dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/yourZodiacLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <!-- Heart Icon -->
+    <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/hearticon"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/yourZodiac"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- "Zodiak Pasangan" Label -->
+    <TextView
+        android:id="@+id/partnerZodiacLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zodiak Pasangan"
+        android:textColor="@color/pink"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/heartIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- EditText: Zodiak Pasangan -->
+    <EditText
+        android:id="@+id/partnerZodiac"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Masukkan zodiak pasanganmu"
+        android:singleLine="true"
+        android:inputType="textCapWords"
+        android:background="@drawable/edit_text"
+        android:padding="12dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/partnerZodiacLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button: Hasil Persentase -->
+    <Button
+        android:id="@+id/resultButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hasil Persentase %"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/pink"
+        android:padding="12dp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/partnerZodiac"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_marginTop="50dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

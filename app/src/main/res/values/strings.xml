@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Soulmatch Alpha</string>
+    <string name="phone_icon">Phone</string>
+    <string name="email_icon">Email</string>
+    <string name="app_logo">Soulmatch</string>
+    <string name="default_web_client_id">313337950429-he0bm4de325q9b54dkpeg1h5kp4l77kq.apps.googleusercontent.com</string>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "313337950429",
+    "project_id": "fir-soulmatch",
+    "storage_bucket": "fir-soulmatch.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313337950429:android:afb442b392656568292b34",
+        "android_client_info": {
+          "package_name": "com.fardan.soulmatchalpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313337950429-rpqbpfs6kqgvpfb4muan1qck3acev833.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fardan.soulmatchalpha",
+            "certificate_hash": "48495d3023ee146a71e0f39cd33cdf3b750edfaa"
+          }
+        },
+        {
+          "client_id": "313337950429-he0bm4de325q9b54dkpeg1h5kp4l77kq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANLsS1R6209INtubcgUFhzx-v_VF2-efg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313337950429-he0bm4de325q9b54dkpeg1h5kp4l77kq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/historyLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Container Vertikal untuk Toolbar + tvHistory + ScrollView -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/pink"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextColor="@android:color/white">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/backIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backicon"
+                android:contentDescription="Back Button"
+                android:layout_gravity="start" />
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/soulmatchlogopure"
+                android:contentDescription="SoulMatch Logo"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter" />
+
+            <!-- Settings Button -->
+            <ImageButton
+                android:id="@+id/settingsIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/settingicon"
+                android:contentDescription="Settings Button"
+                android:layout_gravity="end" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- tvHistory tepat di bawah Toolbar -->
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textSize="25sp"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp" />
+
+        <!-- ScrollView ambil sisa ruang -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- MATCH HISTORY -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❤️ Match History"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#000000" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/matchRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- TAROT HISTORY -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Tarot History"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="#000000" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tarotRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- BUTTON CLEAR HISTORY -->
+                <Button
+                    android:id="@+id/btnClearHistory"
+                    android:layout_width="100dp"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:backgroundTint="@color/pink"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
